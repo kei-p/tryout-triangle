@@ -40,4 +40,8 @@ class Triangle
 end
 
 if $0 == __FILE__
+  lengths = ARGV.map do |i|
+    i.gsub(',', '').to_i
+  end
+  puts Triangle.check(lengths)
 end
