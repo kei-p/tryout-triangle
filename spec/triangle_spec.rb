@@ -31,6 +31,11 @@ describe Triangle do
         let(:lengths) { [2, 2, 1] }
         it { expect(subject).to eq('isosceles_triangle') }
       end
+
+      context 'length [4, 4, 2]' do
+        let(:lengths) { [4, 4, 2] }
+        it { expect(subject).to eq('isosceles_triangle') }
+      end
     end
 
     context 'equilateral_triangle' do
@@ -43,6 +48,16 @@ describe Triangle do
     context 'not_triangle' do
       context 'length [1, 2, 3]' do
         let(:lengths) { [1, 2, 3] }
+        it { expect(subject).to eq('not_triangle') }
+      end
+
+      context 'length [2, 4, 6]' do
+        let(:lengths) { [2, 4, 6] }
+        it { expect(subject).to eq('not_triangle') }
+      end
+
+      context 'length [1, 1, 2]' do
+        let(:lengths) { [1, 1, 2] }
         it { expect(subject).to eq('not_triangle') }
       end
     end
