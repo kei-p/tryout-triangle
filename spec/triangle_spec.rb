@@ -17,7 +17,7 @@ describe Triangle do
     end
 
     context 'isosceles_triangle' do
-      context 'length [2, 3, 4]' do
+      context 'length [2, 2, 1]' do
         let(:lengths) { [2, 2, 1] }
         it { expect(subject).to eq('isosceles_triangle') }
       end
